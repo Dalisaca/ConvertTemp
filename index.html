@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- links -->
+    <title>Convert Temperature</title>
+  </head>
+  <body>
+    <div class="circleLeftCorner"></div>
+    <div class="circleRightCorner"></div>
+
+    <div class="cotainer mainInfo">
+      <div class="px-4 pt-5 my-5 text-center">
+        <div class="col-lg-12 mx-auto">
+          <p class="pEntrVal lead">
+            Enter values in
+            <span style="color: #68dc3f; font-weight: bold">Celsius</span> and
+            convert them to
+            <span style="color: #696969; font-weight: bold">Fahrenheit</span>
+          </p>
+          <div class="row textareaTemp mt-5">
+            <div class="col-sm-4">
+              <input
+                type="number"
+                class="textAreaC form-control"
+                placeholder="°C"
+                id="target"
+                max="9999"
+              />
+            </div>
+            <div class="col-sm-1 divArrow">
+              <i class="bi bi-chevron-double-right iconArrow"></i>
+            </div>
+            <div class="col-sm-4">
+              <input
+                type="number"
+                class="textareaF form-control"
+                placeholder="°F"
+                readonly
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-10"></div>
+          <div
+            class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-2 mt-5"
+          >
+            <button
+              class="btn btn-convert rounded-pill px-3 p-2 pl-4 pr-4"
+              type="button"
+              onclick="convertTemp()"
+            >
+              convert
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

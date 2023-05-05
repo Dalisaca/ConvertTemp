@@ -1,0 +1,144 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+.btn-convert {
+  border: 2px solid #000000;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+}
+.btn-convert:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.form-control:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.textAreaC:focus {
+  border-color: #68dc3f;
+}
+.textareaF:focus {
+  border-color: #696969;
+}
+.btn-convert:hover {
+  transition-duration: 0.5s;
+  background-color: #000000;
+  color: white;
+}
+
+.btn-convert:active {
+  top: 1px;
+}
+
+.pEntrVal {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 45px;
+
+  -webkit-user-select: none;
+}
+
+.mainInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.textareaTemp {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-bottom: 80px;
+}
+.textareaTemp > div > input {
+  border-radius: 0%;
+  font-size: 1.5rem;
+}
+.textareaF {
+  background-color: #e6e6e6 !important;
+  border: #696969 solid 2px;
+}
+.textAreaC {
+  border: #68dc3f solid 2px;
+}
+.textAreaC::selection {
+  color: white;
+  background-color: #68dc3f;
+}
+.textareaF::selection {
+  color: white;
+  background-color: #696969;
+}
+@keyframes iconArrowAnim {
+  0% {
+    opacity: 0.4;
+    transform: rotate(-45deg) translate(60px, 60px);
+  }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+    transform: rotate(-45deg) translate(-60px, -60px);
+  }
+}
+.iconArrow {
+  color: #d81616;
+  font-size: 1.3rem !important;
+  animation: iconArrowAnim 2s 1s infinite alternate;
+}
+.circleLeftCorner {
+  position: fixed;
+  background-color: red;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  left: -50px;
+  top: -20px;
+
+  filter: blur(150px);
+}
+.circleRightCorner {
+  background-color: red;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: -40px;
+  right: 20px;
+
+  filter: blur(150px);
+}
+@media screen and (max-width: 1080px) {
+  .circleRightCorner {
+    bottom: -150px;
+    right: -40px;
+  }
+
+  .circleLeftCorner {
+    left: -60px;
+    top: -60px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .iconArrow {
+    display: none;
+  }
+  .textareaTemp > div > input {
+    margin-bottom: 20px;
+  }
+}
