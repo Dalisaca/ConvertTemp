@@ -15,3 +15,9 @@ $('#target').on('keyup', function () {
     alert('The number is lower than -999');
   }
 });
+
+$('#target').keyup(function (event) {
+  if (event.keyCode === 13) {
+    $('#btnConvert').click();
+  }
+});
